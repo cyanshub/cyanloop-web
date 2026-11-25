@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <!--
+        指定網頁使用 UTF-8 編碼，
+        確保繁體中文、日文及其他特殊字元能正常顯示。
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        手機與平板的畫面縮放設定。
+
+        width=device-width：
+        讓網頁寬度等於裝置螢幕寬度。
+
+        initial-scale=1.0：
+        頁面第一次開啟時，以 100% 比例顯示。
+
+        Android Chrome、iPhone Safari 及 iPad Safari 都會使用這項設定。
+    -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!--
+        瀏覽器分頁標題。
+
+        也可能顯示於：
+        1. 瀏覽器分頁
+        2. 搜尋引擎結果
+        3. 書籤名稱
+        4. 尚未另外指定名稱時的手機主畫面捷徑
+    -->
+    <title>CyanLoop｜影片循環練習器</title>
+
+    <!--
+        網站內容簡介。
+
+        搜尋引擎可能會將這段文字顯示在搜尋結果中，
+        因此應簡短說明 CyanLoop 的主要用途。
+    -->
+    <meta name="description"
+          content="CyanLoop 是專為樂器練習與影片學習設計的 YouTube 循環播放器，可設定多組 AB 循環段落、播放速度、段落筆記與收藏影片。">
+
+    <!--
+        宣告這個網站或 Web App 的應用程式名稱。
+
+        部分瀏覽器、作業系統或安裝功能可能會讀取這項資訊。
+    -->
+    <meta name="application-name"
+          content="CyanLoop">
+
+    <!--
+        瀏覽器介面的主題色。
+
+        Android Chrome 可能會將這個顏色套用於網址列、
+        分頁或部分系統介面。
+
+        部分支援的 iPhone Safari／PWA 情境也可能採用此顏色。
+    -->
+    <meta name="theme-color"
+          content="#eaf8fb">
+
+    <!--
+        Android 與其他支援的行動瀏覽器設定。
+
+        content="yes" 表示網站加入手機主畫面後，
+        可以較接近獨立 App 的方式開啟。
+    -->
+    <meta name="mobile-web-app-capable"
+          content="yes">
+
+    <!--
+        iPhone／iPad 加入主畫面的設定。
+
+        content="yes" 表示從主畫面開啟時，
+        可以使用接近獨立 App 的顯示方式，
+        不一定顯示完整的 Safari 網址列。
+    -->
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
+
+    <!--
+        iPhone／iPad 加入主畫面後顯示的應用程式名稱。
+
+        名稱刻意保持簡短，避免在主畫面上被截斷。
+    -->
+    <meta name="apple-mobile-web-app-title"
+          content="CyanLoop">
+
+    <!--
+        設定 iPhone／iPad 從主畫面開啟時的狀態列樣式。
+
+        default：
+        使用系統預設狀態列樣式，適合目前的淺色介面。
+
+        這項設定只有搭配
+        apple-mobile-web-app-capable="yes"
+        時才會生效。
+    -->
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="default">
+
+    <!--
+        避免 iPhone Safari 將頁面上的數字，
+        例如影片時間或其他數字，自動辨識成電話號碼。
+    -->
+    <meta name="format-detection"
+          content="telephone=no">
+
+    <!--
+        搜尋引擎索引設定。
+
+        index：
+        允許搜尋引擎收錄這個頁面。
+
+        follow：
+        允許搜尋引擎繼續追蹤頁面中的連結。
+    -->
+    <meta name="robots"
+          content="index, follow">
+
+    <!--
+        一般瀏覽器分頁圖示。
+
+        適用於桌面瀏覽器、Android Chrome
+        及其他支援 PNG favicon 的瀏覽器。
+    -->
+    <link rel="icon"
+          type="image/png"
+          href="/cyanloop-web/favicon.png">
+
+    <!--
+        iPhone／iPad 加入主畫面時使用的圖示。
+
+        目前先共用 favicon.png。
+        如果日後另外製作 180 × 180 的 iOS 圖示，
+        可以改成 href="/apple-touch-icon.png"。
+    -->
+    <link rel="apple-touch-icon"
+          href="/cyanloop-web/favicon.png">
+
+    <!--
+        Open Graph 社群分享資訊。
+
+        當網址分享到 LINE、Facebook、Discord
+        或其他支援 Open Graph 的服務時，
+        可能會讀取以下內容產生網址預覽。
+    -->
+    <!-- 分享內容的類型，website 代表一般網站。 -->
+    <meta property="og:type"
+          content="website">
+
+    <!-- 分享內容使用的語言及地區。 -->
+    <meta property="og:locale"
+          content="zh_TW">
+
+    <!-- 分享預覽中顯示的網站名稱。 -->
+    <meta property="og:site_name"
+          content="CyanLoop">
+
+    <!-- 分享預覽的標題。 -->
+    <meta property="og:title"
+          content="CyanLoop｜影片循環練習器">
+
+    <!-- 分享預覽的簡介。 -->
+    <meta property="og:description"
+          content="設定 YouTube 影片的多組 AB 循環段落、播放速度與練習筆記，讓每一次練習更有效率。">
+
+    <!--
+        如果日後網站已有正式網址和社群分享圖片，
+        可以再加入以下設定：
+
+        <meta property="og:url"
+              content="https://你的正式網址">
+
+        <meta property="og:image"
+              content="https://你的正式網址/og-image.png">
+
+        在檔案及正式網址尚未準備好以前先不要加入，
+        避免分享時讀取到不存在的圖片或網址。
+    -->
+  <script type="module" crossorigin src="/cyanloop-web/assets/index-CFDWElyq.js"></script>
+  <link rel="stylesheet" crossorigin href="/cyanloop-web/assets/index-BsxOB_L5.css">
+</head>
+
+<body>
+    <!--
+        Vue 應用程式的掛載位置。
+
+        src/main.js 會建立 Vue App，
+        再將整個應用程式掛載到 #app。
+    -->
+    <div id="app"></div>
+
+    <!--
+        載入 Vue 專案的 JavaScript 進入點。
+
+        type="module" 表示使用 ES Module，
+        可以在 main.js 中使用 import／export。
+    -->
+</body>
+</html>
